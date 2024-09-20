@@ -1,8 +1,10 @@
 import React from "react"
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink,useLocation } from "react-router-dom"
 import imageUrl from "/assets/images/avatar-icon.png"
 
 export default function Header() {
+    const location = useLocation()
+
     const activeStyles = {
         fontWeight: "bold",
         textDecoration: "underline",
@@ -35,7 +37,9 @@ export default function Header() {
                 >
                     Vans
                 </NavLink>
-                <Link to="login" className="login-link">
+                <Link to="login" className="login-link"
+                    state={{state:location.pathname}}
+                >
                     <img
                         src={imageUrl}
                         className="login-icon"
