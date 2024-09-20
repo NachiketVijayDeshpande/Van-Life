@@ -10,7 +10,7 @@ export default function Login() {
     const location = useLocation()
     const navigate = useNavigate()
 
-    const from = location.state?.from || "/host";
+    const from = location.state?.from || location.state?.state  || "/host";
 
     function handleSubmit(e) {
         e.preventDefault()
