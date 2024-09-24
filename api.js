@@ -62,19 +62,19 @@ export async function getHostVans() {
 
 
 
-// export async function getHostVan(id) {
-//     const q = query(
-//         vansCollectionRef,
-//         where(documentId(), "==", id),
-//         where("hostId", "==", "123")
-//     )
-//     const snapshot = await getDocs(q)
-//     const vans = snapshot.docs.map(doc => ({
-//         ...doc.data(),
-//         id: doc.id
-//     }))
-//     return vans[0]
-// }
+export async function getHostVan(id) {
+    const q = query(
+        vansCollectionRef,
+        where(documentId(), "==", id),
+        where("hostId", "==", "123")
+    )
+    const snapshot = await getDocs(q)
+    const vans = snapshot.docs.map(doc => ({
+        ...doc.data(),
+        id: doc.id
+    }))
+    return vans[0]
+}
 
 export async function loginUser(creds) {
     const res = await fetch("/api/login",

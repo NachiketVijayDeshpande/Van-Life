@@ -13,7 +13,7 @@ export default function VanDetail() {
         async function loadVans() {
             setLoading(true)
             try {
-                const data = await getVans(id)
+                const data = await getVan(id)
                 setVan(data)
             } catch (err) {
                 setError(err)
