@@ -741,8 +741,11 @@ img.graph {
     margin-right: 5px;
 }
 .logout-btn{
-     text-decoration: none;
+    text-decoration: none;
     color: #4d4d4d;
     font-weight: 600;
     padding: 5px 20px;
+    background:none;
+    border:none;
+    
 }
